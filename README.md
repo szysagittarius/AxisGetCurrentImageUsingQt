@@ -23,8 +23,25 @@ so this can be achieved by:
 
 
 
+now the problem turn out to be 
+calling IDispatch member GetCurrentImage: Exception thrown by server
+             Code       : 16389
+             Source     : 
+             Description: 
+             Help       : 
+         Connect to the exception(int,QString,QString,QString) signal to catch this exception
 
-/***************/
+
+Qt methods getdocument to get the AXIS document from AXIS COM component, which describes the exact way how to call every function of AXIS media control using Qt) and I follow their document, but it still cannot work. I felt desperate.
+
+If any guys can solve this problem, please contact me by following web post:
+http://qt-project.org/forums/viewthread/42370/
+
+
+Thanks a lot
+
+
+/*******version 0********/
 
 AxisGetCurrentImageUsingQt
 Axis getCurrentImage 
