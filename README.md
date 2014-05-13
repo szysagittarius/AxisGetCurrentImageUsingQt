@@ -1,6 +1,31 @@
 AxisGetCurrentImageUsingQt
 ==========================
 
+
+version 1
+I debug one of the bug in my code in function GetCurrentImage:
+priviously it reports can not access to QVariant private, it is because 
+
+I want to use QVariant* MediaBuffer;
+but QList<QVariant> varList; 
+    varList <<0<<MediaBuffer<<MediaBufferSize;
+
+    QVariant can not accpet address type,
+
+so this can be achieved by:
+	
+	QVariant MediaBuffer;
+	long MediaBufferSize
+	QList<QVariant> varList;
+    varList << 0 << MediaBuffer << MediaBufferSize;
+
+    axWidget->dynamicCall("GetCurrentImage(int, QVariant&, long&)",varList);
+
+
+
+
+/***************/
+
 AxisGetCurrentImageUsingQt
 Axis getCurrentImage 
 
